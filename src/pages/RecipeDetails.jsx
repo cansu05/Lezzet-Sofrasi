@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import "../styles/recipesDetails.css";
+import RecipeDetailsCard from "../components/UI/RecipeDetailsCard";
+import RecipeHero from "../components/UI/RecipeHero";
 
 const RecipeDetails = () => {
   return (
-    <div>RecipeDetails</div>
-  )
-}
+    <>
+      <RecipeHero />
+      <RecipeDetailsCard />
+    </>
+  );
+};
 
-export default RecipeDetails
+export default RecipeDetails;

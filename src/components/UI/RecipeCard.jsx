@@ -3,8 +3,13 @@ import React from "react";
 import "../../styles/recipeCard.css";
 
 import { Col, Container, Row } from "reactstrap";
+import { Link } from "react-router-dom";
+
+
 
 const RecipeCard = ({ item }) => {
+
+
   return (
     <section>
       <Container>
@@ -16,7 +21,7 @@ const RecipeCard = ({ item }) => {
                 <div className="recipe__content">
                   <h3 className="mb-4">{item.recipeName}</h3>
                   <p>{item.shortDesc}</p>
-                  <button>Tarife bak</button>
+                  <button><Link to={`/recipes/${item.id}`}>Tarife bak</Link></button>
                 </div>
               </div>
             </div>
