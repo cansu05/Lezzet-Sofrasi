@@ -5,9 +5,9 @@ import ContentCard from "./ContentCard";
 const ContentList = () => {
   return (
     <>
-      {recipes.map((item, index) => {
+      {recipes.map((item) => {
         if (item.category === "favorite") {
-          return <ContentCard item={item} key={index} />;
+          return <ContentCard item={item} key={item.id} />;
         }
       })}
     </>

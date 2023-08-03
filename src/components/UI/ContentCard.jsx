@@ -1,6 +1,7 @@
 import React from "react";
 import { Col } from "reactstrap";
 import "../../styles/contentCard.css";
+import { Link } from "react-router-dom";
 const ContentCard = ({ item }) => {
   return (
     <Col lg="4">
@@ -8,11 +9,11 @@ const ContentCard = ({ item }) => {
         <div className="card__item">
           <img src={item.imgUrl} alt="" />
           <div className="card__content">
-            <h3>Waffle</h3>
+            <h3>{item.recipeName}</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi!
+              {item.shortDesc}
             </p>
-            <button>Tarife bak</button>
+            <button><Link to={`/recipes/${item.id}`}>Tarife bak</Link></button>
           </div>
         </div>
       </div>
