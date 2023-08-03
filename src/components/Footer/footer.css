@@ -1,0 +1,39 @@
+.footer {
+  background: var(--yellow-3);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  column-gap: 15rem;
+  padding: 4rem 0rem;
+}
+.footer .logo h1 {
+  font-size: 2.3rem !important;
+  font-weight: 600 !important;
+}
+
+.footer__info {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.footer__info h5 {
+  font-weight: 700 !important;
+}
+
+.social{
+    display: flex;
+    column-gap: .3rem;
+}
+.social span {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  justify-content: center;
+  background: var(--yellow-1);
+  padding: 5px;
+  border-radius: 5px;
+  
+}
+
