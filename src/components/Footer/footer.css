@@ -11,6 +11,10 @@
   font-weight: 600 !important;
 }
 
+.logo__icon{
+  font-size: 2.8rem !important;
+}
+
 .footer__info {
     display: flex;
     align-items: start;
@@ -35,5 +39,37 @@
   padding: 5px;
   border-radius: 5px;
   
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    column-gap: 5rem;
+    padding: 3rem 0rem;
+  }
+  .footer .logo h1 {
+    font-size: 1.4rem !important;
+    font-weight: 600 !important;
+  }
+
+  .logo__icon{
+    font-size: 2rem !important;
+  }
+  
+  .footer__info {
+      row-gap: .5rem;
+  }
+  
+  .footer__info h5 {
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+  }
+  
+  .social{
+      display: flex;
+      column-gap: .3rem;
+  }
+  .social span {
+    font-size: 1.4rem !important;
+  }
 }
 

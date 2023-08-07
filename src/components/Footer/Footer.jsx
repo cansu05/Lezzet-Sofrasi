@@ -15,7 +15,7 @@ const Footer = () => {
     <footer className="footer">
       {/* ----- LOGO START-----*/}
       <div className="logo">
-        <PiCoffee className="logo__icon fs-1" />
+        <PiCoffee className="logo__icon " />
         <div>
           <h1>Lezzet Sofrası</h1>
         </div>

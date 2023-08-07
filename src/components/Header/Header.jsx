@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 
 import { PiCoffee } from "react-icons/pi";
 import { CiSearch } from "react-icons/ci";
+import { AiOutlineMenu } from "react-icons/ai";
 
 import "./header.css";
 import { Link, NavLink } from "react-router-dom";
-import { Col, Container, Row } from "reactstrap";
-import recipes from "../../assets/data/recipes";
+import { Container, Row } from "reactstrap";
 
 const nav__links = [
   {
@@ -24,6 +24,9 @@ const nav__links = [
 ];
 
 const Header = () => {
+  const menuRef = useRef(null);
+
+  const menuToggle = () => menuRef.current.classList.toggle("active__menu");
 
   return (
     <header className="header">
@@ -45,7 +48,7 @@ const Header = () => {
             {/* ----- LOGO END-----*/}
 
             {/* ----- NAVIGATION START-----*/}
-            <div className="navitation">
+            <div className="navigation" ref={menuRef} onClick={menuToggle}>
               <ul className="menu">
                 {nav__links.map((item, index) => (
                   <li className="nav__item" key={index}>
@@ -65,12 +68,17 @@ const Header = () => {
 
             {/* ----- SEARCH START-----*/}
             <div className="search__box">
-              <input
-                type="text"
-                placeholder="Yemek tarifi ara"
-              />
+              <input type="text" placeholder="Yemek tarifi ara" />
               <span>
                 <CiSearch className="search__icon fs-5" />
+              </span>
+            </div>
+            {/* ----- SEARCH END-----*/}
+
+            {/* ----- SEARCH START-----*/}
+            <div className="mobile__menu">
+              <span onClick={menuToggle}>
+                <AiOutlineMenu className="fs-4" />
               </span>
             </div>
             {/* ----- SEARCH END-----*/}

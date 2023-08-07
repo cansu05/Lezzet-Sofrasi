@@ -2,12 +2,14 @@
   background: var(--white-1);
   width: 100%;
   padding: 30px 0px;
+ 
 }
 
 .nav__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-around;
+
 }
 
 .logo {
@@ -25,6 +27,7 @@
   font-size: 1.7rem !important;
   font-weight: 500 !important;
   cursor: pointer;
+  margin: 0;
 }
 
 .menu {
@@ -32,6 +35,7 @@
   flex-direction: row;
   align-items: center;
   column-gap: 2rem;
+  margin: 0;
 }
 
 .nav__item {
@@ -80,4 +84,47 @@
 .search__icon {
   color: var(--neutral-3);
   margin: 1px;
+}
+
+.mobile__menu {
+  color: var(--neutral-2);
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .navigation {
+    position:absolute;
+    width: 100%;
+    height: 100px;
+    z-index: 9999;
+    display: none;
+    
+  }
+  .menu {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 100%;
+    background: var(--yellow-3);
+    z-index: 99999;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .active__menu {
+    display: block;
+  }
+
+  .mobile__menu {
+    display: block;
+  }
+
+  .logo h1 {
+    font-size: 1.4rem !important;
+  }
+
+  .nav__item {
+    font-size: 1.4rem;
+  }
 }
