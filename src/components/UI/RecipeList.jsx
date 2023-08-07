@@ -9,6 +9,7 @@ const RecipeList = () => {
         if (item.category === "latest") {
           return <RecipeCard item={item} key={item.id} />;
         }
+        return null; // Eğer belirli bir koşul karşılanmazsa null döndürülebilir
       })}
     </>
   );
